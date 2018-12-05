@@ -1,0 +1,20 @@
+.admin__sidemenu__contanier__item {
+    .is-active {
+        a {
+            color: $active-color;
+        }
+    }
+    a {
+        color: $dark-color;
+    }
+}
+.admin__menu--padding {
+    .el-submenu__title {
+        padding-left: 45px;
+    }
+    .admin__menu--padding {
+        .el-menu-item {
+            padding-left: 80px;
+        }
+    }
+}
