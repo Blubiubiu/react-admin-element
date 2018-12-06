@@ -1,12 +1,11 @@
 /**
  * @desc 新增用户
  * @author lsy
- * @todo xxx
  */
 
 import React, { Component } from 'react';
 
-import { Form, Button, Input, Radio, Cascader, Message } from 'element-react';
+import { Form, Button, Input, Radio, Cascader, Message, Select } from 'element-react';
 
 export default class UserInfo extends Component {
 	constructor(props) {
@@ -45,6 +44,7 @@ export default class UserInfo extends Component {
 				name: '',
 				sex: '1',
 				age: '',
+				role: '',
 				province: [],
 				address: ''
 			},
@@ -65,6 +65,7 @@ export default class UserInfo extends Component {
 						trigger: 'change'
 					}
 				],
+				role: [ { required: true, message: '请选择用户角色', trigger: 'change' } ],
 				province: [ { required: true, message: '请选择省份', trigger: 'change', type: 'array' } ]
 			}
 		};
@@ -121,6 +122,13 @@ export default class UserInfo extends Component {
 						value={this.state.form.age}
 						onChange={this.onChange.bind(this, 'age')}
 					/>
+				</Form.Item>
+				<Form.Item label="用户权限" prop="role">
+					<Select value={this.state.form.role} placeholder="请选择" onChange={this.onChange.bind(this, 'role')}>
+						<Select.Option label="管理员" value="1"></Select.Option>
+						<Select.Option label="Vip会员" value="2"></Select.Option>
+						<Select.Option label="普通会员" value="3"></Select.Option>
+					</Select>
 				</Form.Item>
 				<Form.Item label="居住地" prop="province">
 					<Cascader

@@ -26,7 +26,8 @@ export default class User extends Component {
                         menuAlign="start"
 						menu={
 							<Dropdown.Menu>
-								<Dropdown.Item>退出</Dropdown.Item>
+                                <Dropdown.Item command="setUp">设置</Dropdown.Item>
+								<Dropdown.Item command="signOut">退出</Dropdown.Item>
 							</Dropdown.Menu>
 						}
 					>
@@ -38,7 +39,16 @@ export default class User extends Component {
 			</div>
 		);
 	}
-	handleClick() {
-		window.location.href = '#/login'
+	handleClick(command) {
+        switch (command) {
+            case 'setUp': 
+                window.location.href = '#/SetUp'
+            break;
+            case 'signOut':
+                window.location.href = '#/Login'
+            break;
+            default:
+                return 
+        }
 	}
 }

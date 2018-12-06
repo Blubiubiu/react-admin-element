@@ -81,7 +81,7 @@ export default class User extends Component {
 				{
                     id: "4",
 					name: 'Kimie',
-					access: '用户',
+					access: 'Vip会员',
 					sex: '女',
 					age: '24',
 					address: '安徽市'
@@ -89,7 +89,7 @@ export default class User extends Component {
 				{
                     id: "5",
 					name: 'Blues',
-					access: '用户',
+					access: '普通用户',
 					sex: '男',
 					age: '24',
 					address: '天津市高薪区'
@@ -97,7 +97,7 @@ export default class User extends Component {
 				{
                     id: "6",
 					name: 'Sun',
-					access: '用户',
+					access: '普通用户',
 					sex: '男',
 					age: '24',
 					address: '武汉市'
@@ -105,7 +105,7 @@ export default class User extends Component {
 				{
                     id: "7",
 					name: 'Lebur',
-					access: '用户',
+					access: '普通用户',
 					sex: '男',
 					age: '24',
 					address: '重庆市市区'

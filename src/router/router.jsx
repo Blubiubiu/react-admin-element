@@ -6,7 +6,8 @@
  * @param {boolean} [hideInMenu] - 左侧菜单中单条不显示
  */
 
-import Home from '@/containers/Home';
+import Home from '@/containers/Home'
+import SetUp from '@/containers/Pages/SetUp'
 import User from '@/containers/Pages/User'
 import UserInfo from '@/containers/Pages/User/UserInfo'
 import Jurisdiction from '@/containers/Pages/Jurisdiction'
@@ -21,6 +22,12 @@ const router = [
         path: "/",
         component: Home,
         type: "el-icon-information"
+    },
+    {
+        name: "设置",
+        path: "/SetUp",
+        component: SetUp,
+        hideInMenu: true
     },
     {
         name: "用户组",

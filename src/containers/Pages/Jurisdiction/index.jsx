@@ -27,7 +27,7 @@ export default class Jurisdiction extends Component {
 					desc: '管理员是帮助admin来管理系统的人，能力一般的人可无法胜任'
 				},
 				{
-					title: 'Vip用户',
+					title: 'Vip会员',
 					name: '3',
 					desc: '充钱就可以了'
 				},
