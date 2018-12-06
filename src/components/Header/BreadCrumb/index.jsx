@@ -1,3 +1,8 @@
+/**
+ * @desc 面包屑导航
+ * @author lsy
+ */
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Breadcrumb } from 'element-react';

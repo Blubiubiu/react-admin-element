@@ -1,11 +1,9 @@
-.admin__headerNav {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    border-bottom: 1px solid $border-color;
-}
 .admin__main__container {
     flex: 1;
     display: flex;
     overflow: hidden;
+}
+.admin__headerNav {
+    height: 60px;
+    border-bottom: 1px solid $border-color;
 }

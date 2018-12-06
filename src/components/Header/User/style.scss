@@ -1,0 +1,14 @@
+.admin__header__user {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    > img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+}
+.admin__header__userName {
+    cursor: pointer;
+}

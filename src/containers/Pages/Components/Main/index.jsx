@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { Layout } from 'element-react';
 
 import SideMenu from './SideMenu';
-import BreadCrumb from './BreadCrumb'
+import Header from '@/components/Header'
 
 import './style.scss';
 
@@ -21,7 +21,7 @@ class Main extends Component {
 				</Layout.Col>
 				<Layout.Col style={{flex: 'auto', overflow: 'hidden'}}>
 					<Layout.Row className="admin__headerNav">
-					<BreadCrumb />
+						<Header/>
 					</Layout.Row>
 					<div style={{padding: '20px'}}>
 						{this.props.children}

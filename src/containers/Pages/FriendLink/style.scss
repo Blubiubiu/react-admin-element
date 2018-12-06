@@ -1,0 +1,17 @@
+.admin__friendlink {
+    li {
+        height: 30px;
+        margin-bottom: 40px;
+        img {
+            height: 30px;
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        color: #000;
+        span {
+            margin-left: 20px;
+        }
+    }
+}

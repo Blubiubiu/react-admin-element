@@ -25,9 +25,6 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="App">
-				{
-					console.log(this.props)
-				}
 					<Switch>
 						<Route path="/login" component={Login}/>
 						<Route path="/" render={() => MainRouter}/>
@@ -35,9 +32,6 @@ class App extends Component {
 				</div>
 			</Router>
 		);
-	}
-	componentDidMount () {
-		
 	}
 }
 

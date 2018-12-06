@@ -9,12 +9,11 @@
 import Home from '@/containers/Home';
 import User from '@/containers/Pages/User'
 import UserInfo from '@/containers/Pages/User/UserInfo'
-
+import Jurisdiction from '@/containers/Pages/Jurisdiction'
 import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
-
-
+import FriendLink from '@/containers/Pages/FriendLink'
 
 const router = [
     {
@@ -39,9 +38,15 @@ const router = [
         ]
     },
     {
+        name: "用户权限",
+        path: "/Jurisdiction",
+        component: Jurisdiction,
+        type: "el-icon-setting"
+    },
+    {
         name: "多级菜单",
         path: "/Part",
-        type: "el-icon-message",
+        type: "el-icon-share",
         children: [
             {
                 name: "多级菜单1",
@@ -65,7 +70,13 @@ const router = [
                 component: Part2
             },
         ]
-    }
+    },
+    {
+        name: "友情链接",
+        path: "/FriendLink",
+        component: FriendLink,
+        type: "el-icon-star-on"
+    },
 ]
 
 export default router
