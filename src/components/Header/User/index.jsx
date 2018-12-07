@@ -44,6 +44,7 @@ class User extends Component {
 		);
 	}
 	handleClick(command) {
+        console.log(this.props.router.defaultActive)
         switch (command) {
             case 'setUp': 
                 window.location.href = '#/SetUp';
