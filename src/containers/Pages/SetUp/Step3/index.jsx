@@ -4,7 +4,7 @@ export default class Step3 extends Component {
   render() {
     return (
       <div>
-        
+        step3
       </div>
     )
   }

@@ -5,6 +5,8 @@ class Router {
     @observable.ref routerArr = routeLink;
     @observable routerPath = "/";
     @observable.ref routerName = [];
+    //侧边栏默认选中
+    @observable defaultActive = "/"
 
     @action.bound
     setRouterPath(val) {
