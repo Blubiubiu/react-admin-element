@@ -15,6 +15,7 @@ import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
+import Dragable from '@/containers/Pages/Dragable'
 
 const router = [
     {
@@ -84,6 +85,12 @@ const router = [
         component: FriendLink,
         type: "el-icon-star-on"
     },
+    {
+        name: "拖动",
+        path: "/Dragable",
+        component: Dragable,
+        type: "el-icon-star-on"
+    }
 ]
 
 export default router
