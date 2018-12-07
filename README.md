@@ -1,2 +1,2 @@
-# react-element-admin
+# react-admin-element
 react+react-router+mobx+element
