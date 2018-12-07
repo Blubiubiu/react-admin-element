@@ -64,7 +64,7 @@ export default class Login extends Component {
 				<Layout.Col span={16} />
 				<Layout.Col span={8}>
 					<Form ref="form" model={this.state.form} rules={this.state.rules} className="admin__login__form">
-                        <div style={{textAlign: 'center', marginBottom: '40px'}}>welcome to react-element-admin</div>
+                        <div style={{textAlign: 'center', marginBottom: '40px'}}>welcome to react-admin-element</div>
                         <Form.Item label="用户名" prop="name">
 							<Input value={this.state.form.name} onChange={this.onChange.bind(this, 'name')} />
 						</Form.Item>

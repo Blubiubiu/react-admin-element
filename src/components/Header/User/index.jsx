@@ -7,8 +7,12 @@ import React, { Component } from 'react';
 import { Dropdown } from 'element-react';
 
 import './style.scss';
+import { inject, observer } from 'mobx-react';
 
-export default class User extends Component {
+@inject('router')
+@observer
+
+class User extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -40,9 +44,11 @@ export default class User extends Component {
 		);
 	}
 	handleClick(command) {
+        console.log(this.props.router.defaultActive)
         switch (command) {
             case 'setUp': 
-                window.location.href = '#/SetUp'
+                window.location.href = '#/SetUp';
+                this.props.router.defaultActive = ""
             break;
             case 'signOut':
                 window.location.href = '#/Login'
@@ -52,3 +58,5 @@ export default class User extends Component {
         }
 	}
 }
+
+export default User

@@ -13,7 +13,7 @@ export default class FriendLink extends Component {
 			<div className="admin__friendlink">
 				<ul>
           <li>
-            <a href="https://github.com/Blubiubiu/react-element-admin" rel="noopener noreferrer" target="_blank">
+            <a href="https://github.com/Blubiubiu/react-admin-element" rel="noopener noreferrer" target="_blank">
 							<img src={require('@/assets/images/github-logo.svg')} alt="" />
 							<span>项目地址</span>
 						</a>

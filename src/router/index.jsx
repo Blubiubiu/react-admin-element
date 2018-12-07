@@ -27,6 +27,8 @@ class RouterMap extends Component {
 	}
 	componentDidUpdate() {
 		this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
+		//设置侧边栏选中选项
+		this.props.router.defaultActive = this.props.location.pathname
 	}
 	/**
 	 * @desc 根据path返回name
