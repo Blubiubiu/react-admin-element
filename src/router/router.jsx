@@ -7,6 +7,7 @@
  */
 
 import Home from '@/containers/Home'
+import Icons from '@/containers/Pages/Icons'
 import SetUp from '@/containers/Pages/SetUp'
 import User from '@/containers/Pages/User'
 import UserInfo from '@/containers/Pages/User/UserInfo'
@@ -23,7 +24,13 @@ const router = [
         name: "首页",
         path: "/",
         component: Home,
-        type: "el-icon-information"
+        type: "admin-icon-liebiao"
+    },
+    {
+        name: "图标库",
+        path: "/Icons",
+        component: Icons,
+        type: "admin-icon-tiaoshi",
     },
     {
         name: "设置",
@@ -35,7 +42,7 @@ const router = [
         name: "用户组",
         path: "/User",
         component: User,
-        type: "el-icon-menu",
+        type: "admin-icon-icon_zhanghao",
         hideChildren: true, 
         children: [
             {
@@ -50,7 +57,7 @@ const router = [
         name: "用户权限",
         path: "/Jurisdiction",
         component: Jurisdiction,
-        type: "el-icon-setting"
+        type: "admin-icon-zuzhiqunzu"
     },
     {
         name: "上传",
@@ -61,7 +68,7 @@ const router = [
     {
         name: "多级菜单",
         path: "/Part",
-        type: "el-icon-share",
+        type: "admin-icon-youxupailie",
         children: [
             {
                 name: "多级菜单1",
