@@ -16,10 +16,10 @@ class Main extends Component {
 	render() {
 		return (
 			<Layout.Row className="admin__main__container">
-				<Layout.Col style={{flex: '0 0 300px', height: '100%'}}>
+				<Layout.Col style={{flex: '0 0 240px', height: '100%'}}>
 					<SideMenu />
 				</Layout.Col>
-				<Layout.Col style={{flex: 'auto', overflow: 'hidden'}}>
+				<Layout.Col style={{flex: 'auto', overflowX: 'hidden', overflowY: 'scroll'}}>
 					<Layout.Row className="admin__headerNav">
 						<Header/>
 					</Layout.Row>
