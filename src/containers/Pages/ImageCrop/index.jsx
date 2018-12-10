@@ -1,4 +1,4 @@
-
+//参照segmentfault的用户头像管理功能开发
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/lib/ReactCrop.scss';
@@ -22,9 +22,10 @@ class ImageCrop extends PureComponent {
       reader.readAsDataURL(e.target.files[0]);
     }
   };
- 
+
   onImageLoaded = (image, pixelCrop) => {
     this.imageRef = image;
+
     // Make the library regenerate aspect crops if loading new images.
     const { crop } = this.state;
 

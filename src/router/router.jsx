@@ -18,7 +18,8 @@ import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
 import Dragable from '@/containers/Pages/Dragable'
-
+import ImageCrop from '@/containers/Pages/ImageCrop'
+ 
 const router = [
     {
         name: "首页",
@@ -104,6 +105,12 @@ const router = [
         path: "/Dragable",
         component: Dragable,
         type: "el-icon-star-on"
+    },
+    {
+        name: "图片裁剪",
+        path: "/ImageCrop",
+        component: ImageCrop,
+        type: "el-icon-picture"
     }
 ]
 
