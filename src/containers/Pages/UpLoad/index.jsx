@@ -25,11 +25,9 @@ export default class UpLoad extends Component {
 				<Layout.Col span={12}>
 					<HeadImgUpLoad/>
 				</Layout.Col>
-                <Layout.Row>
-                    <Layout.Col>
-                        <DragUpLoad/>
-                    </Layout.Col>
-                </Layout.Row>
+				<Layout.Col>
+					<DragUpLoad/>
+				</Layout.Col>
 			</Layout.Row>
 		);
 	}

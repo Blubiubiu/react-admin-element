@@ -13,6 +13,8 @@ import User from '@/containers/Pages/User'
 import UserInfo from '@/containers/Pages/User/UserInfo'
 import Jurisdiction from '@/containers/Pages/Jurisdiction'
 import UpLoad from '@/containers/Pages/UpLoad'
+import UpLoadExcel from '@/containers/Pages/Excel/UpLoadExcel'
+import DownLoadExcel from '@/containers/Pages/Excel/DownLoadExcel'
 import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
@@ -65,6 +67,23 @@ const router = [
         path: "/UpLoad",
         component: UpLoad,
         type: "el-icon-upload"
+    },
+    {
+        name: "Excel",
+        path: "/Excel",
+        type: "admin-icon-biaodanzujian-biaoge",
+        children: [
+            {
+                name: "导入Excel",
+                path: "/UpLoadExcel",
+                component: UpLoadExcel
+            },
+            {
+                name: "导出Excel",
+                path: "/DownLoadExcel",
+                component: DownLoadExcel
+            },
+        ]
     },
     {
         name: "多级菜单",

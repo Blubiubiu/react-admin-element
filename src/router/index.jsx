@@ -7,7 +7,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-import { recursion } from '@/assets/js/utils';
+import { recursion } from '@/libs/utils';
 import { inject, observer } from 'mobx-react';
 
 @inject('router')
