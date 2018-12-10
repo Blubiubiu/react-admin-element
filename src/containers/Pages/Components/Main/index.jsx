@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 import { Layout } from 'element-react';
 
 import SideMenu from './SideMenu';
-import Header from '@/components/Header'
+import Header from './Header'
 
 import './style.scss';
 

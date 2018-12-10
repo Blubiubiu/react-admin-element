@@ -5,8 +5,8 @@
 
 import React, { Component } from 'react'
 
-import BreadCrumb from '@/components/Header/BreadCrumb'
-import User from '@/components/Header/User'
+import BreadCrumb from './BreadCrumb'
+import User from './User'
 
 import './style.scss'
 

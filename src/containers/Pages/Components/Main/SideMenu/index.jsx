@@ -22,6 +22,7 @@ class SideMenu extends Component {
 						defaultActive={this.props.router.defaultActive}
 						className="admin__sidemenu__contaniner__menu"
 						theme="dark"
+						uniqueOpened
 					>
 						{this.recursion(this.props.router.routerArr)}
 					</Menu>
