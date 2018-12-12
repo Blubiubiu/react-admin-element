@@ -25,6 +25,7 @@ class RouterMap extends Component {
 						<Route exact key={item.path} render={() => <Redirect to={item.path} />} />
 					))
 				}
+				<Route render={() => <Redirect to="/404" />} />
 				
 			</Switch>
 		);
