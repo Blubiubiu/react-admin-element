@@ -10,7 +10,7 @@ import Home from '@/containers/Home'
 import Icons from '@/containers/Pages/Icons'
 import SetUp from '@/containers/Pages/SetUp'
 import User from '@/containers/Pages/User'
-import UserInfo from '@/containers/Pages/User/UserInfo'
+import CreateUser from '@/containers/Pages/User/CreateUser'
 import Jurisdiction from '@/containers/Pages/Jurisdiction'
 import UpLoad from '@/containers/Pages/UpLoad'
 import UpLoadExcel from '@/containers/Pages/Excel/UpLoadExcel'
@@ -20,6 +20,10 @@ import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
 import Dragable from '@/containers/Pages/Dragable'
+//single router
+import Login from '@/containers/Pages/Login'
+import NotFound from '@/containers/NotFound'
+
 
 const router = [
     {
@@ -49,8 +53,8 @@ const router = [
         children: [
             {
                 name: "新建用户",
-                path: "/UserInfo",
-                component: UserInfo,
+                path: "/CreateUser",
+                component: CreateUser,
                 hideInMenu: true
             }
         ]
@@ -123,6 +127,14 @@ const router = [
         path: "/Dragable",
         component: Dragable,
         type: "el-icon-star-on"
+    },
+    //single router
+    {
+        name: "登录",
+        path: "/Login",
+        component: Login,
+        single: true,
+        hideInMenu: true
     }
 ]
 
