@@ -4,6 +4,9 @@
  * 
  * @param {boolean} [hideChildren] - 左侧菜单该条目下所有均不显示
  * @param {boolean} [hideInMenu] - 左侧菜单中单条不显示
+ * @param {boolean} [single] - 是否不使用公共组件
+ * 
+ * @fires 404需单独处理
  */
 
 import Home from '@/containers/Home'
@@ -136,6 +139,7 @@ const router = [
         single: true,
         hideInMenu: true
     },
+    //404单独处理
     {
         name: "404",
         path: "/404",

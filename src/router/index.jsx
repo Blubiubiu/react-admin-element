@@ -22,11 +22,10 @@ class RouterMap extends Component {
 				}
 				{
 					this.props.router.distributeRouter.singleRouter.map((item) => (
-						<Route exact key={item.path} render={() => <Redirect to={item.path} />} />
+						<Route exact key={item.path} path={item.path} render={() => <Redirect to={item.path} />} />
 					))
 				}
 				<Route render={() => <Redirect to="/404" />} />
-				
 			</Switch>
 		);
 	}
