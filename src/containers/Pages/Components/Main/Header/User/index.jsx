@@ -4,6 +4,7 @@
  */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import { Dropdown } from 'element-react';
 
 import './style.scss';
@@ -26,12 +27,12 @@ class User extends Component {
 				<img src={require('@/assets/images/default_head_img.png')} alt="" />
 				<div>
 					<Dropdown
-                        onCommand={this.handleClick.bind(this)}
+                        
                         menuAlign="start"
 						menu={
 							<Dropdown.Menu>
-                                <Dropdown.Item command="setUp">设置</Dropdown.Item>
-								<Dropdown.Item command="signOut">退出</Dropdown.Item>
+                                <Dropdown.Item command="setUp"><Link to="/SetUp">设置</Link></Dropdown.Item>
+								<Dropdown.Item command="signOut"><Link to="/Login">退出</Link></Dropdown.Item>
 							</Dropdown.Menu>
 						}
 					>
@@ -42,20 +43,6 @@ class User extends Component {
 				</div>
 			</div>
 		);
-	}
-	handleClick(command) {
-        console.log(this.props.router.defaultActive)
-        switch (command) {
-            case 'setUp': 
-                window.location.href = '#/SetUp';
-                this.props.router.defaultActive = ""
-            break;
-            case 'signOut':
-                window.location.href = '#/Login'
-            break;
-            default:
-                return 
-        }
 	}
 }
 

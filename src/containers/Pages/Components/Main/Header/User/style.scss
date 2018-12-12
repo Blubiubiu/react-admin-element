@@ -8,6 +8,12 @@
         margin-right: 15px;
         border-radius: 50%;
     }
+    a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: #999;
+    }
 }
 .admin__header__userName {
     cursor: pointer;
