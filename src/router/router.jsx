@@ -135,6 +135,13 @@ const router = [
         component: Login,
         single: true,
         hideInMenu: true
+    },
+    {
+        name: "404",
+        path: "/404",
+        component: NotFound,
+        single: true,
+        hideInMenu: true
     }
 ]
 
