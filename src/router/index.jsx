@@ -1,13 +1,11 @@
 /**
  * @desc 路由页面
  * @author lsy
- * @todo xxx
  */
 
 import React, { Component } from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 
-import { recursion } from '@/libs/utils';
 import { inject, observer } from 'mobx-react';
 
 @inject('router')
@@ -16,9 +14,17 @@ class RouterMap extends Component {
 	render() {
 		return (
 			<Switch>
-				{recursion(this.props.router.routerArr).map((item) => (
-					<Route exact key={item.path} path={item.path} component={item.component} />
-				))}
+				{
+					this.props.router.distributeRouter.defaultRouter.map((item) => (
+						<Route exact key={item.path} path={item.path} component={item.component} />
+					))
+				}
+				{
+					this.props.router.distributeRouter.singleRouter.map((item) => (
+						<Route exact key={item.path} path={item.path} render={() => <Redirect to={item.path} />} />
+					))
+				}
+				<Route render={() => <Redirect to="/404" />} />
 			</Switch>
 		);
 	}

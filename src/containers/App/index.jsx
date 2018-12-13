@@ -4,30 +4,33 @@
  * @todo xxx
  */
 
-
 import React, { Component } from 'react';
 import 'element-theme-default';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from '@/containers/Pages/Components/Main';
-import Login from '@/containers/Pages/Login'
 import RouterMap from '@/router';
 
-import '@/assets/css/common.scss'
+import '@/assets/css/common.scss';
+import { inject, observer } from 'mobx-react';
 
+@inject('router')
+@observer
 class App extends Component {
 	render() {
 		const MainRouter = (
 			<Main>
-				<RouterMap/>
+				<RouterMap />
 			</Main>
-		) 
+		);
 		return (
 			<Router>
 				<div className="App">
 					<Switch>
-						<Route path="/Login" component={Login}/>
-						<Route path="/" render={() => MainRouter}/>
+						{this.props.router.distributeRouter.singleRouter.map((item) => (
+							<Route exact key={item.path} path={item.path} component={item.component} />
+						))}
+						<Route path="/" render={() => MainRouter} />
 					</Switch>
 				</div>
 			</Router>

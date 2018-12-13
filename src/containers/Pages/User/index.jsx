@@ -1,5 +1,12 @@
+/**
+ * @desc 用户组
+ * @author lsy
+ */
+
 import React, { Component } from 'react';
 import { Input, Table, Button, Pagination } from 'element-react';
+
+import AddUser from './AddUser'
 
 export default class User extends Component {
 	constructor(props) {
@@ -109,6 +116,14 @@ export default class User extends Component {
 					sex: '男',
 					age: '24',
 					address: '重庆市市区'
+				},
+				{
+                    id: "8",
+					name: 'rick',
+					access: '普通用户',
+					sex: '男',
+					age: '27',
+					address: '西安市莲湖区'
 				}
 			]
 		};
@@ -133,9 +148,12 @@ export default class User extends Component {
                             </Button>
                         }
                     />
-                    <Button style={{marginBottom: '20px'}} type="primary" onClick={() => {
-                        this.props.history.push('/UserInfo')
-                    }}>新建用户</Button>
+                    <div>
+						<Button style={{marginBottom: '20px'}} type="primary">添加用户</Button>
+						<Button style={{marginBottom: '20px'}} type="primary" onClick={() => {
+							this.props.history.push('/CreateUser')
+						}}>新建用户</Button>
+					</div>
                 </div>
 				<Table
 					style={{ width: '100%' }}
@@ -152,6 +170,8 @@ export default class User extends Component {
 				<div className="admin__pagination">
 					<Pagination layout="total, prev, pager, next" total={1000} />
 				</div>
+				{/* 添加用户 */}
+				<AddUser dialogVisible={false} data={this.state.data}/>
 			</div>
 		);
 	}

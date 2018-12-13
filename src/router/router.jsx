@@ -4,13 +4,16 @@
  * 
  * @param {boolean} [hideChildren] - 左侧菜单该条目下所有均不显示
  * @param {boolean} [hideInMenu] - 左侧菜单中单条不显示
+ * @param {boolean} [single] - 是否不使用公共组件
+ * 
+ * @fires 404需单独处理
  */
 
 import Home from '@/containers/Home'
 import Icons from '@/containers/Pages/Icons'
 
 import User from '@/containers/Pages/User'
-import UserInfo from '@/containers/Pages/User/UserInfo'
+import CreateUser from '@/containers/Pages/User/CreateUser'
 import Jurisdiction from '@/containers/Pages/Jurisdiction'
 import UpLoad from '@/containers/Pages/UpLoad'
 import UpLoadExcel from '@/containers/Pages/Excel/UpLoadExcel'
@@ -19,6 +22,11 @@ import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
+// import Dragable from '@/containers/Pages/Dragable'
+//single router
+import Login from '@/containers/Pages/Login'
+import NotFound from '@/containers/NotFound'
+
 
 import PersonInfo from '@/containers/Pages/SetUp/PersonInfo'
 import HistoryRate from '@/containers/Pages/SetUp/HistoryRate'
@@ -45,8 +53,8 @@ const router = [
         children: [
             {
                 name: "新建用户",
-                path: "/UserInfo",
-                component: UserInfo,
+                path: "/CreateUser",
+                component: CreateUser,
                 hideInMenu: true
             }
         ]
@@ -130,6 +138,28 @@ const router = [
         path: "/FriendLink",
         component: FriendLink,
         type: "el-icon-star-on"
+    },
+    // {
+    //     name: "拖动",
+    //     path: "/Dragable",
+    //     component: Dragable,
+    //     type: "el-icon-star-on"
+    // },
+    //single router
+    {
+        name: "登录",
+        path: "/Login",
+        component: Login,
+        single: true,
+        hideInMenu: true
+    },
+    //404单独处理
+    {
+        name: "404",
+        path: "/404",
+        component: NotFound,
+        single: true,
+        hideInMenu: true
     }
 ]
 

@@ -11,7 +11,10 @@ import SideMenu from './SideMenu';
 import Header from './Header'
 
 import './style.scss';
+import { inject, observer } from 'mobx-react';
 
+@inject('router')
+@observer
 class Main extends Component {
 	render() {
 		return (
@@ -23,6 +26,7 @@ class Main extends Component {
 					<Layout.Row className="admin__headerNav">
 						<Header/>
 					</Layout.Row>
+					<span>{this.props.router.single}</span>
 					<div style={{padding: '20px'}}>
 						{this.props.children}
 					</div>
