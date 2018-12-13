@@ -3,25 +3,18 @@ import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/lib/ReactCrop.scss';
 class ImageCrop extends PureComponent {
-  state = {
-    src: null,
-    crop: {
-      aspect: 1,
-      width: 50,
-      x: 0,
-      y: 0,
-    },
-  };
-
-  onSelectFile = e => {
-    if (e.target.files && e.target.files.length > 0) {
-      const reader = new FileReader();
-      reader.addEventListener('load', () =>
-        this.setState({ src: reader.result }),
-      );
-      reader.readAsDataURL(e.target.files[0]);
-    }
-  };
+  constructor(props) {
+		super(props);
+		this.state = {
+      crop: {
+        aspect: 1,
+        width: 50,
+        x: 0,
+        y: 0,
+      },
+      croppedImageUrl: ""
+    };
+	}
 
   onImageLoaded = (image, pixelCrop) => {
     this.imageRef = image;
@@ -53,7 +46,9 @@ class ImageCrop extends PureComponent {
         pixelCrop,
         'newFile.jpeg',
       );
-      this.setState({ croppedImageUrl });
+      await this.setState({ croppedImageUrl:croppedImageUrl });
+      console.log(this.props)
+      this.props.readCropImgUrl(this.state.croppedImageUrl);
     }
   }
 
@@ -86,23 +81,18 @@ class ImageCrop extends PureComponent {
   }
 
   render() {
-    const { crop, croppedImageUrl, src } = this.state;
+    const { crop } = this.state;
 
     return (
-      <div className="App">
-        <div>
-          <input type="file" onChange={this.onSelectFile} />
-        </div>
-        {src && (
-          <ReactCrop
-            src={src}
-            crop={crop}
-            onImageLoaded={this.onImageLoaded}
-            onComplete={this.onCropComplete}
-            onChange={this.onCropChange}
-          />
-        )}
-        {croppedImageUrl && <img alt="Crop" src={croppedImageUrl} />}
+      <div>
+        <ReactCrop
+          src={this.props.src}
+          crop={crop}
+          onImageLoaded={this.onImageLoaded}
+          onComplete={this.onCropComplete}
+          onChange={this.onCropChange}
+        />
+        {/* {croppedImageUrl && <img alt="Crop" src={croppedImageUrl} />} */}
       </div>
     );
   }
