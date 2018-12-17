@@ -5,7 +5,6 @@
  */
 import React, { Component, Fragment } from "react";
 import { Form, Input, Radio, Button, Loading } from "element-react";
-import "./style.scss";
 import SetPortrait from "./SetPortrait";
 
 import { inject, observer } from 'mobx-react';
