@@ -1,0 +1,11 @@
+
+.quill {
+  .ql-container{
+    height: 240px;
+    display: flex;
+    .ql-editor{
+      flex: auto;
+    }
+  }
+}
+

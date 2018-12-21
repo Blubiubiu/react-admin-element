@@ -22,7 +22,7 @@ import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
-// import Dragable from '@/containers/Pages/Dragable'
+import Quill from '@/containers/Pages/Quill'
 //single router
 import Login from '@/containers/Pages/Login'
 import NotFound from '@/containers/NotFound'
@@ -139,12 +139,12 @@ const router = [
         component: FriendLink,
         type: "el-icon-star-on"
     },
-    // {
-    //     name: "拖动",
-    //     path: "/Dragable",
-    //     component: Dragable,
-    //     type: "el-icon-star-on"
-    // },
+    {
+        name: "富文本编辑器",
+        path: "/Quill",
+        component: Quill,
+        type: "admin-icon-tianxie"
+    },
     //single router
     {
         name: "登录",
