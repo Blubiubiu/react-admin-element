@@ -21,15 +21,16 @@ import DownLoadExcel from '@/containers/Pages/Excel/DownLoadExcel'
 import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
-import FriendLink from '@/containers/Pages/FriendLink'
 import Quill from '@/containers/Pages/Quill'
+import PersonInfo from '@/containers/Pages/SetUp/PersonInfo'
+import HistoryRate from '@/containers/Pages/SetUp/HistoryRate'
+import FriendLink from '@/containers/Pages/FriendLink'
+
 //single router
 import Login from '@/containers/Pages/Login'
 import NotFound from '@/containers/NotFound'
 
 
-import PersonInfo from '@/containers/Pages/SetUp/PersonInfo'
-import HistoryRate from '@/containers/Pages/SetUp/HistoryRate'
  
 const router = [
     {
@@ -117,6 +118,12 @@ const router = [
         ]
     },
     {
+        name: "富文本编辑器",
+        path: "/Quill",
+        component: Quill,
+        type: "admin-icon-tianxie"
+    },
+    {
       name: "个人设置",
       path: "/SetUp",
       type: "el-icon-setting",
@@ -138,12 +145,6 @@ const router = [
         path: "/FriendLink",
         component: FriendLink,
         type: "el-icon-star-on"
-    },
-    {
-        name: "富文本编辑器",
-        path: "/Quill",
-        component: Quill,
-        type: "admin-icon-tianxie"
     },
     //single router
     {

@@ -6,7 +6,7 @@
  * @author benzzle
  */
 
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Editor from "@/components/Editor";
 
 

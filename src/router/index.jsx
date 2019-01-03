@@ -31,12 +31,20 @@ class RouterMap extends Component {
 	componentDidMount() {
         this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
         //设置侧边栏选中选项
-        this.props.router.defaultActive = this.props.router.routerName[0].path
+        if (this.props.router.routerName[0].hideChildren) {
+            this.props.router.defaultActive = this.props.router.routerName[0].path
+        } else {
+            this.props.router.defaultActive = this.props.router.routerName[this.props.router.routerName.length - 1].path
+        }
 	}
 	componentDidUpdate() {
 		this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
 		//设置侧边栏选中选项
-		this.props.router.defaultActive = this.props.router.routerName[0].path
+        if (this.props.router.routerName[0].hideChildren) {
+            this.props.router.defaultActive = this.props.router.routerName[0].path
+        } else {
+            this.props.router.defaultActive = this.props.router.routerName[this.props.router.routerName.length - 1].path
+        }
 	}
 	/**
 	 * @desc 根据path返回name

@@ -14,9 +14,6 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./index.scss";
 class Editor extends Component {
-  constructor(props) {
-    super(props);
-  }
   modules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, false] }],

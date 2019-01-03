@@ -14,10 +14,6 @@ import { inject, observer } from 'mobx-react';
 @observer
 
 class User extends Component {
-    constructor(props) {
-        super(props)
-    }
-
 	render() {
 		return (
 			<div className="admin__header__user">
@@ -28,7 +24,7 @@ class User extends Component {
                         menuAlign="start"
 						menu={
 							<Dropdown.Menu>
-                                <Dropdown.Item command="setUp"><Link to="/SetUp">设置</Link></Dropdown.Item>
+                                <Dropdown.Item command="setUp"><Link to="/PersonInfo">设置</Link></Dropdown.Item>
 								<Dropdown.Item command="signOut"><Link to="/Login">退出</Link></Dropdown.Item>
 							</Dropdown.Menu>
 						}
