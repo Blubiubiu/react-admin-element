@@ -12,6 +12,7 @@ export default class User extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+            addmodal: false,
 			columns: [
 				{
 					type: 'index',
@@ -149,7 +150,9 @@ export default class User extends Component {
                         }
                     />
                     <div>
-						<Button style={{marginBottom: '20px'}} type="primary">添加用户</Button>
+						<Button style={{marginBottom: '20px'}} type="primary" onClick={() => {
+                            this.setState({addmodal: true})
+                        }}>添加用户</Button>
 						<Button style={{marginBottom: '20px'}} type="primary" onClick={() => {
 							this.props.history.push('/CreateUser')
 						}}>新建用户</Button>
@@ -171,8 +174,8 @@ export default class User extends Component {
 					<Pagination layout="total, prev, pager, next" total={1000} />
 				</div>
 				{/* 添加用户 */}
-				<AddUser dialogVisible={false} data={this.state.data}/>
+				<AddUser dialogVisible={this.state.addmodal} data={this.state.data}/>
 			</div>
 		);
-	}
+    }
 }

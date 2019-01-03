@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import { Layout } from 'element-react';
+import { withRouter } from 'react-router-dom';
 
 import SideMenu from './SideMenu';
 import Header from './Header'
@@ -33,7 +34,7 @@ class Main extends Component {
 				</Layout.Col>
 			</Layout.Row>
 		);
-	}
+    }
 }
 
-export default Main
+export default withRouter(Main)

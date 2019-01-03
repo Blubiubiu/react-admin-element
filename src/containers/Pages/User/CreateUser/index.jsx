@@ -153,5 +153,8 @@ export default class UserInfo extends Component {
 				</Form.Item>
 			</Form>
 		);
-	}
+    }
+    componentDidMount() {
+        console.log(this.props.history.location.pathname)
+    }
 }

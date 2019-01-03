@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 import 'element-theme-default';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Main from '@/containers/Pages/Components/Main';
 import RouterMap from '@/router';

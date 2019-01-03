@@ -15,26 +15,28 @@ class RouterMap extends Component {
 		return (
 			<Switch>
 				{
-					this.props.router.distributeRouter.defaultRouter.map((item) => (
+					this.props.router.distributeRouter.defaultRouter.map(item => (
 						<Route exact key={item.path} path={item.path} component={item.component} />
-					))
+                    ))
 				}
-				{
+				{/* {
 					this.props.router.distributeRouter.singleRouter.map((item) => (
 						<Route exact key={item.path} path={item.path} render={() => <Redirect to={item.path} />} />
 					))
-				}
+				} */}
 				<Route render={() => <Redirect to="/404" />} />
 			</Switch>
 		);
 	}
 	componentDidMount() {
-		this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
+        this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
+        //设置侧边栏选中选项
+        this.props.router.defaultActive = this.props.router.routerName[0].path
 	}
 	componentDidUpdate() {
 		this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
 		//设置侧边栏选中选项
-		this.props.router.defaultActive = this.props.location.pathname
+		this.props.router.defaultActive = this.props.router.routerName[0].path
 	}
 	/**
 	 * @desc 根据path返回name

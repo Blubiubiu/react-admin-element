@@ -30,10 +30,6 @@ class SideMenu extends Component {
 			</Layout.Row>
 		);
 	}
-	componentWillMount() {
-		//设置侧边栏默认选中
-		this.props.router.defaultActive = window.location.hash.slice(1)
-	}
 	//sidemenu
 	recursion(arr) {
 		return arr.map((item) => {
