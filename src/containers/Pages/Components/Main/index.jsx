@@ -33,6 +33,7 @@ class Main extends Component {
 					</div>
 				</Layout.Col>
 			</Layout.Row>
+      
 		);
     }
 }

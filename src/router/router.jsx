@@ -11,7 +11,7 @@
 
 import Home from '@/containers/Home'
 import Icons from '@/containers/Pages/Icons'
-import SetUp from '@/containers/Pages/SetUp'
+
 import User from '@/containers/Pages/User'
 import CreateUser from '@/containers/Pages/User/CreateUser'
 import Jurisdiction from '@/containers/Pages/Jurisdiction'
@@ -22,12 +22,15 @@ import Part1_1 from '@/containers/Pages/Part/Part1/Part1_1'
 import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2'
 import Part2 from '@/containers/Pages/Part/Part2'
 import FriendLink from '@/containers/Pages/FriendLink'
-import Dragable from '@/containers/Pages/Dragable'
+import Quill from '@/containers/Pages/Quill'
 //single router
 import Login from '@/containers/Pages/Login'
 import NotFound from '@/containers/NotFound'
 
 
+import PersonInfo from '@/containers/Pages/SetUp/PersonInfo'
+import HistoryRate from '@/containers/Pages/SetUp/HistoryRate'
+ 
 const router = [
     {
         name: "首页",
@@ -40,12 +43,6 @@ const router = [
         path: "/Icons",
         component: Icons,
         type: "admin-icon-tiaoshi",
-    },
-    {
-        name: "设置",
-        path: "/SetUp",
-        component: SetUp,
-        hideInMenu: true
     },
     {
         name: "用户组",
@@ -120,16 +117,33 @@ const router = [
         ]
     },
     {
+      name: "个人设置",
+      path: "/SetUp",
+      type: "el-icon-setting",
+      children: [
+          {
+              name: "个人信息",
+              path: "/PersonInfo",
+              component: PersonInfo
+          },
+          {
+              name: "历史评分",
+              path: "/HistoryRate",
+              component: HistoryRate
+          },
+      ]
+    },
+    {
         name: "友情链接",
         path: "/FriendLink",
         component: FriendLink,
         type: "el-icon-star-on"
     },
     {
-        name: "拖动",
-        path: "/Dragable",
-        component: Dragable,
-        type: "el-icon-star-on"
+        name: "富文本编辑器",
+        path: "/Quill",
+        component: Quill,
+        type: "admin-icon-tianxie"
     },
     //single router
     {

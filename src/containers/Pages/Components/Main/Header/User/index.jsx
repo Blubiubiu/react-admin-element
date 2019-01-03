@@ -10,21 +10,18 @@ import { Dropdown } from 'element-react';
 import './style.scss';
 import { inject, observer } from 'mobx-react';
 
-@inject('router')
+@inject('user')
 @observer
 
 class User extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            userName: 'admin'
-        }
     }
 
 	render() {
 		return (
 			<div className="admin__header__user">
-				<img src={require('@/assets/images/default_head_img.png')} alt="" />
+				<img src={this.props.user.headPortraitUrl} alt="" />
 				<div>
 					<Dropdown
                         
@@ -37,7 +34,7 @@ class User extends Component {
 						}
 					>
 						<span className="admin__header__userName">
-                            {this.state.userName}
+                            {this.props.user.name}
                         </span>
 					</Dropdown>
 				</div>
