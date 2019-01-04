@@ -8,16 +8,13 @@ import { Link } from 'react-router-dom'
 import { Dropdown } from 'element-react';
 
 import './style.scss';
-import { inject, observer } from 'mobx-react';
 
-@inject('user')
-@observer
 
 class User extends Component {
 	render() {
 		return (
 			<div className="admin__header__user">
-				<img src={this.props.user.headPortraitUrl} alt="" />
+				
 				<div>
 					<Dropdown
                         
@@ -29,7 +26,7 @@ class User extends Component {
 						}
 					>
 						<span className="admin__header__userName">
-                            {this.props.user.name}
+                            admin
                         </span>
 					</Dropdown>
 				</div>
