@@ -1,30 +1,29 @@
 //参照segmentfault的用户头像管理功能开发
-import React, { PureComponent } from 'react';
-import ReactCrop from 'react-image-crop';
-import 'react-image-crop/lib/ReactCrop.scss';
+import React, { PureComponent } from "react";
+import ReactCrop from "react-image-crop";
+import "react-image-crop/lib/ReactCrop.scss";
 class ImageCrop extends PureComponent {
   constructor(props) {
-		super(props);
-		this.state = {
+    super(props);
+    this.state = {
       crop: {
         aspect: 1,
         width: 50,
+        height: 50,
         x: 0,
-        y: 0,
+        y: 0
       },
       croppedImageUrl: ""
     };
-	}
+  }
 
   onImageLoaded = (image, pixelCrop) => {
     this.imageRef = image;
-
     // Make the library regenerate aspect crops if loading new images.
     const { crop } = this.state;
-
     if (crop.aspect && crop.height && crop.width) {
       this.setState({
-        crop: { ...crop, height: null },
+        crop: { ...crop, height: null }
       });
     } else {
       this.makeClientCrop(crop, pixelCrop);
@@ -41,23 +40,22 @@ class ImageCrop extends PureComponent {
 
   async makeClientCrop(crop, pixelCrop) {
     if (this.imageRef && crop.width && crop.height) {
+      console.log("没有走过这里吗");
       const croppedImageUrl = await this.getCroppedImg(
         this.imageRef,
         pixelCrop,
-        'newFile.jpeg',
+        "newFile.jpeg"
       );
-      await this.setState({ croppedImageUrl:croppedImageUrl });
-      console.log(this.props)
+      await this.setState({ croppedImageUrl: croppedImageUrl });
       this.props.readCropImgUrl(this.state.croppedImageUrl);
     }
   }
 
   getCroppedImg(image, pixelCrop, fileName) {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = pixelCrop.width;
     canvas.height = pixelCrop.height;
-    const ctx = canvas.getContext('2d');
-
+    const ctx = canvas.getContext("2d");
     ctx.drawImage(
       image,
       pixelCrop.x,
@@ -67,7 +65,7 @@ class ImageCrop extends PureComponent {
       0,
       0,
       pixelCrop.width,
-      pixelCrop.height,
+      pixelCrop.height
     );
 
     return new Promise((resolve, reject) => {
@@ -76,13 +74,12 @@ class ImageCrop extends PureComponent {
         window.URL.revokeObjectURL(this.fileUrl);
         this.fileUrl = window.URL.createObjectURL(blob);
         resolve(this.fileUrl);
-      }, 'image/jpeg');
+      }, "image/jpeg");
     });
   }
 
   render() {
     const { crop } = this.state;
-
     return (
       <div>
         <ReactCrop
