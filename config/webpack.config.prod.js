@@ -86,12 +86,13 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     },
   ];
   if (preProcessor) {
+    loaders.push(require.resolve(preProcessor));
     loaders.push({
-      loader: require.resolve(preProcessor),
+      loader: 'sass-resources-loader',
       options: {
-        sourceMap: shouldUseSourceMap,
-      },
-    });
+        resources: './src/assets/css/common.scss'  
+      }
+    })
   }
   return loaders;
 };
@@ -212,6 +213,7 @@ module.exports = {
     // for React Native Web.
     extensions: ['.mjs', '.web.js', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
+      '@': path.join(__dirname, '..', 'src'),
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
