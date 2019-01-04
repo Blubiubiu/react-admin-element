@@ -14,37 +14,29 @@ class RouterMap extends Component {
 	render() {
 		return (
 			<Switch>
-				{
-					this.props.router.distributeRouter.defaultRouter.map(item => (
-						<Route exact key={item.path} path={item.path} component={item.component} />
-                    ))
-				}
-				{/* {
-					this.props.router.distributeRouter.singleRouter.map((item) => (
-						<Route exact key={item.path} path={item.path} render={() => <Redirect to={item.path} />} />
-					))
-				} */}
+				{this.props.router.distributeRouter.defaultRouter.map((item) => (
+					<Route exact key={item.path} path={item.path} component={item.component} />
+				))}
 				<Route render={() => <Redirect to="/404" />} />
 			</Switch>
 		);
 	}
 	componentDidMount() {
-        this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
-        //设置侧边栏选中选项
-        if (this.props.router.routerName[0].hideChildren) {
-            this.props.router.defaultActive = this.props.router.routerName[0].path
-        } else {
-            this.props.router.defaultActive = this.props.router.routerName[this.props.router.routerName.length - 1].path
-        }
+		this.setDefault();
 	}
 	componentDidUpdate() {
+		this.setDefault();
+	}
+	//设置侧边栏选中选项
+	setDefault() {
 		this.props.router.routerName = this.findNameByPath(this.props.router.routerArr, this.props.location.pathname);
-		//设置侧边栏选中选项
-        if (this.props.router.routerName[0].hideChildren) {
-            this.props.router.defaultActive = this.props.router.routerName[0].path
-        } else {
-            this.props.router.defaultActive = this.props.router.routerName[this.props.router.routerName.length - 1].path
-        }
+		if (this.props.router.routerName[0].hideChildren) {
+			this.props.router.defaultActive = this.props.router.routerName[0].path;
+		} else {
+			this.props.router.defaultActive = this.props.router.routerName[
+				this.props.router.routerName.length - 1
+			].path;
+		}
 	}
 	/**
 	 * @desc 根据path返回name
@@ -58,7 +50,7 @@ class RouterMap extends Component {
 				return arr.some((item) => {
 					if (item.path === path) {
 						NameArr = NameArr.slice(0, index);
-						NameArr.push(item)
+						NameArr.push(item);
 						return true;
 					} else if (Array.isArray(item.children)) {
 						NameArr[index] = item;

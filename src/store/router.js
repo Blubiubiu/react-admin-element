@@ -1,7 +1,12 @@
-import { observable, computed } from 'mobx';
+import {
+    observable,
+    computed
+} from 'mobx';
 import routeLink from '../router/router.jsx';
 
-import { recursion } from '@/libs/utils';
+import {
+    recursion
+} from '@/libs/utils';
 
 class Router {
     @observable.ref routerArr = routeLink;
@@ -18,7 +23,7 @@ class Router {
     @observable defaultActive = "/"
 
     @computed
-    get distributeRouter () {
+    get distributeRouter() {
         recursion(routeLink).map(item => {
             if (item.single) {
                 this.ADMIN_ROUTER.singleRouter.push(item)

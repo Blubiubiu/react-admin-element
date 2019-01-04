@@ -23,6 +23,7 @@ class SideMenu extends Component {
 						className="admin__sidemenu__contaniner__menu"
 						theme="dark"
 					>
+						<div className="admin__sidemenu__contaniner__menu__logo">logo</div>
 						{this.recursion(this.props.router.routerArr)}
 					</Menu>
 				</Layout.Col>
@@ -44,9 +45,7 @@ class SideMenu extends Component {
 							</span>
 						}
 					>
-						<div className="admin__menu--padding">
-							{this.recursion(item.children)}
-						</div>
+						<div className="admin__menu--padding">{this.recursion(item.children)}</div>
 					</Menu.SubMenu>
 				);
 			} else if (!item.hideInMenu) {
