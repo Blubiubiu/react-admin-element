@@ -24,7 +24,6 @@ class User extends Component {
                         menuAlign="start"
 						menu={
 							<Dropdown.Menu>
-                                <Dropdown.Item command="setUp"><Link to="/PersonInfo">设置</Link></Dropdown.Item>
 								<Dropdown.Item command="signOut"><Link to="/Login">退出</Link></Dropdown.Item>
 							</Dropdown.Menu>
 						}

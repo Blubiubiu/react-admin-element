@@ -11,7 +11,6 @@
 
 import Home from '@/containers/Home';
 
-import PersonInfo from '@/containers/Pages/SetUp/PersonInfo';
 import FriendLink from '@/containers/Pages/FriendLink';
 
 //single router
@@ -24,19 +23,6 @@ const router = [
 		path: '/',
 		component: Home,
 		type: 'admin-icon-liebiao'
-	},
-
-	{
-		name: '个人设置',
-		path: '/SetUp',
-		type: 'el-icon-setting',
-		children: [
-			{
-				name: '个人信息',
-				path: '/PersonInfo',
-				component: PersonInfo
-			}
-		]
 	},
 	{
 		name: '友情链接',
