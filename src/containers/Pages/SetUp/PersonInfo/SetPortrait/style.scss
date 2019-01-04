@@ -1,35 +1,36 @@
-
-
-.portrait{
-  width: 200px;
-  text-align: center;
-  .portrait__wrapper{
-    height: 200px;
+.portrait {
     width: 200px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #dbdbdb;
-    background-repeat: no-repeat;
-    background-position: center center;
-    img {
-      max-width: 100%;
-    }
-  }
-  .head{
-    margin-top: 12px;
-    position: relative;
-    input {
-      width: 100%;
-      height: 100%;
-      background: yellow;
-      opacity: 0;
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 1;
-    }
-  }
-}
+    text-align: center;
+    .portrait__wrapper {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dbdbdb;
+        background-repeat: no-repeat;
+        background-position: center center;
 
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .head {
+        margin-top: 12px;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            background: yellow;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+}

@@ -8,8 +8,11 @@
 import React, { PureComponent } from "react";
 import ImageCrop from "@/components/ImageCrop";
 import { Button, Dialog } from "element-react";
+
 import "./style.scss";
+
 import defaultStudentUrl from "@/assets/images/default_head_img.png";
+
 class SetPortrait extends PureComponent {
   state = {
     file: "",

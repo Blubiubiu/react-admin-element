@@ -23,7 +23,6 @@ import Part1_2 from '@/containers/Pages/Part/Part1/Part1_2';
 import Part2 from '@/containers/Pages/Part/Part2';
 import Quill from '@/containers/Pages/Quill';
 import PersonInfo from '@/containers/Pages/SetUp/PersonInfo';
-import HistoryRate from '@/containers/Pages/SetUp/HistoryRate';
 import FriendLink from '@/containers/Pages/FriendLink';
 
 //single router
@@ -130,11 +129,6 @@ const router = [
 				name: '个人信息',
 				path: '/PersonInfo',
 				component: PersonInfo
-			},
-			{
-				name: '历史评分',
-				path: '/HistoryRate',
-				component: HistoryRate
 			}
 		]
 	},

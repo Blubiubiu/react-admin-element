@@ -1,7 +1,6 @@
 /**
  * @desc login
  * @author lsy
- * @todo xxx
  */
 
 import React, { Component } from 'react';
