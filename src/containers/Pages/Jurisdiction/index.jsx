@@ -5,8 +5,8 @@
 
 import React, { Component } from 'react';
 
-import Role from './Role'
-import Juris from './Juris'
+import Role from './Role';
+import Juris from './Juris';
 
 import './style.scss';
 
@@ -36,8 +36,8 @@ export default class Jurisdiction extends Component {
 					name: '4',
 					desc: '拥有基础权限'
 				}
-            ],
-            JurisArr: [
+			],
+			JurisArr: [
 				{
 					id: 1,
 					label: '用户权限',
@@ -90,8 +90,8 @@ export default class Jurisdiction extends Component {
 						}
 					]
 				}
-            ],
-            options: {
+			],
+			options: {
 				children: 'children',
 				label: 'label'
 			}
@@ -101,20 +101,23 @@ export default class Jurisdiction extends Component {
 	render() {
 		return (
 			<div className="admin__jurisdiction">
-				<Role roleArr={this.state.roleArr} activeName={this.state.activeName} hanldeRoleArr={this.hanldeRoleArr}/>
-                <Juris JurisArr={this.state.JurisArr} options={this.state.options} />
+				<Role
+					roleArr={this.state.roleArr}
+					activeName={this.state.activeName}
+					hanldeRoleArr={this.hanldeRoleArr}
+				/>
+				<Juris JurisArr={this.state.JurisArr} options={this.state.options} />
 			</div>
 		);
-    }
-    
-    hanldeRoleArr = (val) => {
-        this.setState({
-            roleArr: this.state.roleArr.concat({
-                title: val.title,
-                name: String(this.state.roleArr.length + 1),
-                desc: val.desc
-            })
-        })
-    }
+	}
 
+	hanldeRoleArr = (val) => {
+		this.setState({
+			roleArr: this.state.roleArr.concat({
+				title: val.title,
+				name: String(this.state.roleArr.length + 1),
+				desc: val.desc
+			})
+		});
+	};
 }

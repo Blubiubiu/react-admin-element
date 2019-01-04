@@ -12,14 +12,22 @@ export default class FriendLink extends Component {
 		return (
 			<div className="admin__friendlink">
 				<ul>
-          <li>
-            <a href="https://github.com/Blubiubiu/react-admin-element" rel="noopener noreferrer" target="_blank">
+					<li>
+						<a
+							href="https://github.com/Blubiubiu/react-admin-element"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
 							<img src={require('@/assets/images/github-logo.svg')} alt="" />
 							<span>项目地址</span>
 						</a>
 					</li>
 					<li>
-						<a href="https://elemefe.github.io/element-react/#/zh-CN/quick-start" rel="noopener noreferrer" target="_blank">
+						<a
+							href="https://elemefe.github.io/element-react/#/zh-CN/quick-start"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
 							<img src={require('@/assets/images/ele-logo.svg')} alt="" />
 							<span>Element-react-UI</span>
 						</a>
@@ -34,13 +42,13 @@ export default class FriendLink extends Component {
 						</a>
 					</li>
 					<li>
-            <a href="https://reacttraining.com/react-router/" rel="noopener noreferrer" target="_blank">
+						<a href="https://reacttraining.com/react-router/" rel="noopener noreferrer" target="_blank">
 							<img src={require('@/assets/images/react-router-logo.png')} alt="" />
 							<span>React-router英文文档(中文文档总慢半拍)</span>
 						</a>
 					</li>
-          <li>
-            <a href="https://cn.mobx.js.org/" rel="noopener noreferrer" target="_blank">
+					<li>
+						<a href="https://cn.mobx.js.org/" rel="noopener noreferrer" target="_blank">
 							<img src={require('@/assets/images/mobx-logo.png')} alt="" />
 							<span>Mobx中文文档</span>
 						</a>

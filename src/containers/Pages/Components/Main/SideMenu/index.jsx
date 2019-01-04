@@ -1,7 +1,5 @@
 /**
  * @desc 侧边导航栏
- * @author lsy
- * @todo xxx
  */
 
 import React, { Component } from 'react';

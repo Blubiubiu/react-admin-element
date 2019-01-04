@@ -1,7 +1,6 @@
 /**
  * @desc 导入excel
  * @author lsy
- * @todo 上传后列表问题
  */
 
 import React, { Component } from 'react';
@@ -16,7 +15,7 @@ export default class UpLoadExcel extends Component {
 		super(props);
 		this.state = {
 			columns: [],
-            data: []
+			data: []
 		};
 	}
 	render() {
@@ -29,15 +28,13 @@ export default class UpLoadExcel extends Component {
 				<div className="admin__upload__excel__operation">
 					<h4 style={{ marginBottom: '20px' }}>导入EXCEL</h4>
 					<Upload
-                        ref="upload"
+						ref="upload"
 						action="//jsonplaceholder.typicode.com/posts/"
 						accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                        onSuccess={(response, file, fileList) => this.handleSuccess(response, file, fileList)}
+						onSuccess={(response, file, fileList) => this.handleSuccess(response, file, fileList)}
 						beforeUpload={(file) => this.handleBefore(file)}
 					>
-						<Button type="primary">
-							点击上传
-						</Button>
+						<Button type="primary">点击上传</Button>
 					</Upload>
 				</div>
 				<div className="admin__upload__excel__table">{table}</div>
@@ -46,15 +43,14 @@ export default class UpLoadExcel extends Component {
 	}
 
 	handleBefore(file) {
+		if (!file) {
+			return false;
+		}
 
-        if (!file) {
-            return false
-        }
-
-        this.setState({
-            columns: [],
-            data: []
-        })
+		this.setState({
+			columns: [],
+			data: []
+		});
 
 		const reader = new FileReader();
 		reader.readAsArrayBuffer(file);
@@ -74,8 +70,7 @@ export default class UpLoadExcel extends Component {
 				columns: [ ...this.state.columns, ...tableTitle ],
 				data: [ ...this.state.data, ...results ]
 			});
-        };
-        
+		};
 	}
 
 	handleSuccess(response, file, fileList) {}

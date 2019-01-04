@@ -82,8 +82,8 @@ export default class UserInfo extends Component {
 					duration: 1000
 				});
 				setTimeout(() => {
-					this.props.history.goBack()
-				}, 1000)
+					this.props.history.goBack();
+				}, 1000);
 			} else {
 				Message({
 					message: '创建失败，请检查您的输入后重试',
@@ -93,7 +93,7 @@ export default class UserInfo extends Component {
 				return false;
 			}
 		});
-	}
+	};
 
 	onChange(key, value) {
 		this.setState({
@@ -125,9 +125,9 @@ export default class UserInfo extends Component {
 				</Form.Item>
 				<Form.Item label="用户权限" prop="role">
 					<Select value={this.state.form.role} placeholder="请选择" onChange={this.onChange.bind(this, 'role')}>
-						<Select.Option label="管理员" value="1"></Select.Option>
-						<Select.Option label="Vip会员" value="2"></Select.Option>
-						<Select.Option label="普通会员" value="3"></Select.Option>
+						<Select.Option label="管理员" value="1" />
+						<Select.Option label="Vip会员" value="2" />
+						<Select.Option label="普通会员" value="3" />
 					</Select>
 				</Form.Item>
 				<Form.Item label="居住地" prop="province">
@@ -153,8 +153,8 @@ export default class UserInfo extends Component {
 				</Form.Item>
 			</Form>
 		);
-    }
-    componentDidMount() {
-        console.log(this.props.history.location.pathname)
-    }
+	}
+	componentDidMount() {
+		console.log(this.props.history.location.pathname);
+	}
 }

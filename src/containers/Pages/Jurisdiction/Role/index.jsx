@@ -28,10 +28,10 @@ export default class Role extends Component {
 		this.setState({
 			form: Object.assign({}, this.state.form, { [key]: value })
 		});
-    }
-    
-    handleSubmit = (e) => {
-        e.preventDefault();
+	}
+
+	handleSubmit = (e) => {
+		e.preventDefault();
 
 		this.refs.form.validate((valid) => {
 			if (valid) {
@@ -39,53 +39,48 @@ export default class Role extends Component {
 					message: '添加成功',
 					type: 'success',
 					duration: 1500
-                });
-                this.props.hanldeRoleArr(this.state.form)
-                this.setState({ dialogVisible: false })
-                this.setState({
-                    form: {
-                        ...this.state.form,
-                        title: '',
-                        desc: ''
-                    }
-                });
+				});
+				this.props.hanldeRoleArr(this.state.form);
+				this.setState({ dialogVisible: false });
+				this.setState({
+					form: {
+						...this.state.form,
+						title: '',
+						desc: ''
+					}
+				});
 			}
 		});
-    }
+	};
 
-    onCancel = () => {
-        this.setState({ dialogVisible: false });
-        this.setState({
+	onCancel = () => {
+		this.setState({ dialogVisible: false });
+		this.setState({
 			form: {
-                ...this.state.form,
-                title: '',
-                desc: ''
-            }
+				...this.state.form,
+				title: '',
+				desc: ''
+			}
 		});
-    }
+	};
 
 	render() {
 		const { roleArr, activeName } = this.props;
 		return (
 			<div className="admin__user__role">
 				<Collapse value={activeName} accordion>
-					{roleArr.map((item) => <Collapse.Item key={item.name} title={item.title} name={item.name}>
-								<div>{item.desc}</div>
-							</Collapse.Item>
-						
-					)}
+					{roleArr.map((item) => (
+						<Collapse.Item key={item.name} title={item.title} name={item.name}>
+							<div>{item.desc}</div>
+						</Collapse.Item>
+					))}
 				</Collapse>
 
 				<Button className="admin__user__role__btn" onClick={this.addRole}>
 					添加角色
 				</Button>
 
-				<Dialog
-					title="添加角色"
-					size="tiny"
-					visible={this.state.dialogVisible}
-					onCancel={this.onCancel}
-				>
+				<Dialog title="添加角色" size="tiny" visible={this.state.dialogVisible} onCancel={this.onCancel}>
 					<Dialog.Body>
 						<Form ref="form" model={this.state.form} rules={this.state.rules} labelWidth="80">
 							<Form.Item label="角色名" prop="title">
@@ -113,6 +108,6 @@ export default class Role extends Component {
 	}
 
 	addRole = () => {
-        this.setState({ dialogVisible: true });
-    };
+		this.setState({ dialogVisible: true });
+	};
 }

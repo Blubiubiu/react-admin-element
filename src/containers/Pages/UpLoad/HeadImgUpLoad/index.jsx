@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import { Upload, Message } from 'element-react';
 
-import './style.scss'
+import './style.scss';
 
 export default class HeadImgUpLoad extends Component {
 	constructor(props) {
@@ -20,21 +20,17 @@ export default class HeadImgUpLoad extends Component {
 		const { imageUrl } = this.state;
 		return (
 			<div className="admin__upload">
-                <h3>头像上传</h3>
-                <p style={{margin: '10px 0', color: '#ccc', fontSize: '14px'}}>使用 beforeUpload 限制用户上传的图片格式和大小。</p>
+				<h3>头像上传</h3>
+				<p style={{ margin: '10px 0', color: '#ccc', fontSize: '14px' }}>使用 beforeUpload 限制用户上传的图片格式和大小。</p>
 				<Upload
 					className="admin__uploader"
 					action="//jsonplaceholder.typicode.com/posts/"
 					showFileList={false}
 					onSuccess={(res, file) => this.handleAvatarScucess(res, file)}
-                    beforeUpload={(file) => this.beforeAvatarUpload(file)}
-                    tip={<div className="el-upload__tip">测试时请尽量使用不大于500kb的图片or文件</div>}
+					beforeUpload={(file) => this.beforeAvatarUpload(file)}
+					tip={<div className="el-upload__tip">测试时请尽量使用不大于500kb的图片or文件</div>}
 				>
-					{imageUrl ? (
-						<img src={imageUrl} alt=""/>
-					) : (
-						<i className="el-icon-plus admin__uploader__icon" />
-					)}
+					{imageUrl ? <img src={imageUrl} alt="" /> : <i className="el-icon-plus admin__uploader__icon" />}
 				</Upload>
 			</div>
 		);

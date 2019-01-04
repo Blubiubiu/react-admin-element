@@ -10,7 +10,7 @@ import './style.scss';
 
 export default class Juris extends Component {
 	append(store, data) {
-    store.append({ id: this.id++, label: `新增权限`, children: [] }, data); 
+		store.append({ id: this.id++, label: `新增权限`, children: [] }, data);
 	}
 
 	remove(store, data) {
@@ -43,9 +43,9 @@ export default class Juris extends Component {
 					data={JurisArr}
 					options={options}
 					isShowCheckbox={true}
-          nodeKey="id"
-          expandOnClickNode={false}
-          defaultExpandAll={true}
+					nodeKey="id"
+					expandOnClickNode={false}
+					defaultExpandAll={true}
 					defaultCheckedKeys={[ 1, 2, 3 ]}
 					renderContent={(...args) => this.renderContent(...args)}
 				/>

@@ -6,32 +6,31 @@
  * @author benzzle
  */
 
-import React, { Component } from "react";
-import Editor from "@/components/Editor";
-
+import React, { Component } from 'react';
+import Editor from '@/components/Editor';
 
 class Quill extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      content: "<p>传递的数据</p>"
-    };
-    this.setEditorContent = this.setEditorContent.bind(this);
-  }
- 
-  async setEditorContent(content) {
-    await this.setState({ content });
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			content: '<p>传递的数据</p>'
+		};
+		this.setEditorContent = this.setEditorContent.bind(this);
+	}
 
-  render() {
-    return (
-      <div>
-        <Editor setEditorContent={this.setEditorContent} content={this.state.content} />
-        <h2 style={{margin: '20px'}}>富文本展示内容如下：</h2>
-        <code style={{padding:"0 20px"}}>{this.state.content}</code>
-      </div>
-    );
-  }
+	async setEditorContent(content) {
+		await this.setState({ content });
+	}
+
+	render() {
+		return (
+			<div>
+				<Editor setEditorContent={this.setEditorContent} content={this.state.content} />
+				<h2 style={{ margin: '20px' }}>富文本展示内容如下：</h2>
+				<code style={{ padding: '0 20px' }}>{this.state.content}</code>
+			</div>
+		);
+	}
 }
 
 export default Quill;

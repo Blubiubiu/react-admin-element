@@ -186,7 +186,11 @@ export default class User extends Component {
 					<Pagination layout="total, prev, pager, next" total={1000} />
 				</div>
 				{/* 添加用户 */}
-				<AddUser dialogVisible={this.state.addmodal} data={this.state.data} changeModalStatus={this.changeModalStatus.bind(this)} />
+				<AddUser
+					dialogVisible={this.state.addmodal}
+					data={this.state.data}
+					changeModalStatus={this.changeModalStatus.bind(this)}
+				/>
 			</div>
 		);
 	}

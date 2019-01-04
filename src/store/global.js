@@ -1,10 +1,13 @@
-import { observable, action } from 'mobx'
+import {
+    observable,
+    action
+} from 'mobx'
 
 class Global {
     @observable id = '111';
 
     @action.bound
-    setId () {
+    setId() {
         this.id = '222'
     }
 }
