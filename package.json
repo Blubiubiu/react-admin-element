@@ -1,6 +1,6 @@
 {
-  "name": "my-blog",
-  "version": "0.1.0",
+  "name": "react-admin-element",
+  "version": "1.0.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
