@@ -8,14 +8,13 @@ react+react-router+mobx+element
 npm install
 ```
 ## CLI工具
-<!-- ### Development
-```bush
-npm run dev
-```
-### Production(Build)
-```bush
-npm run build
-``` -->
+
+### 1. react-admin-demo    
+这个版本里是我们推荐里版本，里面包括了我们为您提供的一些封装好的简单功能，以及一些常用的插件
+### 2. react-admin-simple
+这个版本主要是为了帮助一些只想要基础功能，却对代码无从下手清除的情况下产生的。
+版本里只拥有路由，登录，404功能，其余的多余代码我们已经帮您剔除掉了...
+
 ## Run
 ### Development
 ```bush
@@ -29,7 +28,8 @@ npm run build
 ## 简介
 &emsp;&emsp;react-admin-element是基于react.js，搭配使用[element-react](https://elemefe.github.io/element-react/#/zh-CN/quick-start) UI组件库形成的一套简易后台管理系统。非常简洁的配置，快速进入程序开发。
 如果您想在线体验react-admin-element，您可以到[在线访问](https://blubiubiu.github.io/build/#/)体验。
-<!-- 如果你只是想要一个清醒爽朗的界面，那你可以下载[简化版模板]()来做开发。 -->
+
+如果你只是想要一个清醒爽朗的界面，那你可以下载[简化版模板](https://github.com/Blubiubiu/react-admin-element/tree/clean_version)来做开发。对应的脚手架工具下面的react-admin-simple模块。
 
 ### 特点
 &emsp;&emsp;此项目适用于初始的react和element-react（当然ui组件库可以改为其他的组件库）的ui组件库构建后台管理系统，项目之初的目的是为了最简洁的构建出一套可用于立即进入开发的架构，开发者只需要处理路由部分的结构就可以构建出左侧的side-menu，以及header的面包屑。我们处理好了相关的404，500报错信息页面。
