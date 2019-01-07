@@ -46,7 +46,6 @@ export default class Juris extends Component {
 					nodeKey="id"
 					expandOnClickNode={false}
 					defaultExpandAll={true}
-					defaultCheckedKeys={[ 1, 2, 3 ]}
 					renderContent={(...args) => this.renderContent(...args)}
 				/>
 			</div>
