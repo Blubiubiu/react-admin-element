@@ -75,7 +75,6 @@ npm run build
 ├── config  开发相关配置
 ├── public  打包所需静态资源
 └── src
-    ├── api  AJAX请求
     └── assets  项目静态资源
         ├── font  字体文件
         ├── css  css文件
