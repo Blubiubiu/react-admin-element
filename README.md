@@ -9,9 +9,15 @@ npm install
 ```
 ## CLI工具
 
-### 1. react-admin-demo    
+```
+npm install create-react-admin-cli -g
+
+create-react-admin
+```
+### 输入上述命令之后会让你选择安装哪个版本：
+#### 1. react-admin-demo    
 这个版本里是我们推荐里版本，里面包括了我们为您提供的一些封装好的简单功能，以及一些常用的插件
-### 2. react-admin-simple
+#### 2. react-admin-simple
 这个版本主要是为了帮助一些只想要基础功能，却对代码无从下手清除的情况下产生的。
 版本里只拥有路由，登录，404功能，其余的多余代码我们已经帮您剔除掉了...
 
