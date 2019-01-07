@@ -60,12 +60,12 @@ npm run build
         ├── font  字体文件
         ├── css  css文件
         └── images  图片资源
-    ├── components  基础组件
+    ├── components  基础组件（开发者只需要关心的组件-组件）
     └── containers  项目运行配置
         ├── App  根组件
         ├── Home  主页
         ├── NotFound  404页面
-        └── Pages  业务开发组件页面（开发者只需要关心的组件）
+        └── Pages  业务开发组件页面（开发者只需要关心的组件-页面）
     ├── libs  封装工具函数
     ├── router  路由配置
     └── store  Mobx配置
