@@ -4,6 +4,7 @@
  */
 
 import React, { Component } from 'react';
+import screenfull from 'screenfull'
 
 import BreadCrumb from './BreadCrumb';
 import User from './User';
@@ -15,8 +16,16 @@ export default class Header extends Component {
 		return (
 			<div className="admin__header">
 				<BreadCrumb />
-				<User />
+                <div className="admin__header__user">
+                    <i onClick={this.fullscreen.bind(this)} className="admin-icon-quanping"/>
+                    <User />
+                </div>
 			</div>
 		);
-	}
+    }
+    fullscreen() {
+        if (screenfull.enabled) {
+            screenfull.request();
+        }
+    }
 }

@@ -3,4 +3,13 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    &__user {
+        display: flex;
+        align-items: center;
+        > i {
+            margin-right: 40px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+    }
 }
