@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 50px;
     height: 100%;
-    &__user {
+    &__content {
         display: flex;
         align-items: center;
         > i {
@@ -11,5 +12,11 @@
             font-size: 26px;
             cursor: pointer;
         }
+    }
+    .el-color-picker__panel {
+        right: 0;
+    }
+    .el-color-picker__trigger {
+        background: #fff;
     }
 }

@@ -24,7 +24,7 @@ class App extends Component {
 		);
 		return (
 			<Router>
-				<div className="App">
+				<div ref="App" className="App">
 					<Switch>
 						{this.props.router.distributeRouter.singleRouter.map((item) => (
 							<Route exact key={item.path} path={item.path} component={item.component} />
@@ -34,7 +34,11 @@ class App extends Component {
 				</div>
 			</Router>
 		);
-	}
+    }
+    componentDidMount() {
+        console.log(this)
+        console.log(window)
+    }
 }
 
 export default App;

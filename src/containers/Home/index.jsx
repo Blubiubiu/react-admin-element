@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 class Home extends Component {
+    
 	render() {
-		return <div>welcome to react-admin-element</div>;
+		return (
+            <div>welcome to react-admin-element</div>
+        )
 	}
 }
 

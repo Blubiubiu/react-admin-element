@@ -13,7 +13,7 @@ import Header from './Header';
 import './style.scss';
 import { inject, observer } from 'mobx-react';
 
-@inject('router')
+@inject('router', 'global')
 @observer
 class Main extends Component {
 	render() {

@@ -4,11 +4,12 @@ import {
 } from 'mobx'
 
 class Global {
-    @observable id = '111';
+    @observable style = null;
 
     @action.bound
-    setId() {
-        this.id = '222'
+    setStyle(val) {
+        console.log(val)
+        this.style = val
     }
 }
 

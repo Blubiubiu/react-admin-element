@@ -20,7 +20,6 @@ class User extends Component {
 				<img src={this.props.user.headPortraitUrl} alt="" />
 				<div>
 					<Dropdown
-                        
                         menuAlign="start"
 						menu={
 							<Dropdown.Menu>
