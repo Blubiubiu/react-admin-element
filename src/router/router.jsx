@@ -27,6 +27,7 @@ import FriendLink from '@/containers/Pages/FriendLink';
 
 //single router
 import Login from '@/containers/Pages/Login';
+import ForgetPwd from '@/containers/Pages/ForgetPwd'
 import NotFound from '@/containers/NotFound';
 
 const router = [
@@ -145,7 +146,14 @@ const router = [
 		component: Login,
 		single: true,
 		hideInMenu: true
-	},
+    },
+    {
+        name: '忘记密码',
+        path: '/ForgetPwd',
+        component: ForgetPwd,
+        single: true,
+        hideInMenu: true
+    },
 	//404单独处理
 	{
 		name: '404',
