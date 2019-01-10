@@ -69,9 +69,14 @@ export default class Login extends Component {
 								value={this.state.form.password}
 								onChange={this.onChange.bind(this, 'password')}
 							/>
+                            <div className="admin__login__form__forgetPwd">
+                                <span onClick={() => {
+                                    this.props.history.push('/ForgetPwd')
+                                }}>忘记密码?</span>
+                            </div>
 						</Form.Item>
-						<Form.Item className="admin__login__btn">
-							<Button type="primary" onClick={this.handleSubmit.bind(this)}>
+						<Form.Item className="admin__login__form__btn">
+							<Button type="primary" style={{width: '200px'}} onClick={this.handleSubmit.bind(this)}>
 								登录
 							</Button>
 						</Form.Item>

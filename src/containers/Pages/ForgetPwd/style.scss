@@ -1,0 +1,15 @@
+.admin__forgetPwd__wrapper {
+    width: 100%;
+}
+.admin__forgetPwd__step {
+    margin-top: 40px;
+    text-align: center;
+    .el-steps .el-step:last-child {
+        width: auto !important;
+    }
+}
+.admin__forgetPwd__content {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+}

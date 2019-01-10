@@ -5,7 +5,16 @@
     border: 1px solid $border-color;
     border-radius: 4px;
     background-color: #fff;
-}
-.admin__login__btn {
-    text-align: center;
+    &__forgetPwd {
+        text-align: right;
+        > span {
+            cursor: pointer;
+        }
+        > span:hover {
+            color: $active-color;
+        }
+    }
+    &__btn {
+        text-align: center;
+    }
 }
