@@ -4,6 +4,10 @@ react+react-router+mobx+element
 
 [在线体验地址](https://blubiubiu.github.io/build/#/)
 
+## 项目不在维护
+
+因平时实在太忙，同时还要维护多个项目，只能放弃一些，感谢支持
+
 ## CLI 工具
 
 ```
